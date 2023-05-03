@@ -1,0 +1,15 @@
+﻿----------------[D:/GIT/PRODUCT/TestAutomation/testdata/LoginFacebook.txt | login_block]----------------
+[CMD/FRAME] : RELOAD, [ITEM] : fbURL, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : wait, [ITEM] : null, [X/SET VALUE] : 1000, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : LoginId, [X/SET VALUE] : you_account, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : wait, [ITEM] : null, [X/SET VALUE] : 1000, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : LoginPass, [X/SET VALUE] : your_password, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : wait, [ITEM] : null, [X/SET VALUE] : 1000, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : LoginButton, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : wait, [ITEM] : null, [X/SET VALUE] : 1000, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : KEY, [ITEM] : null, [X/SET VALUE] : RETURN, [Y/EXPECTED VALUE] : null
+
+-------------------------------------------------SUMMARY-------------------------------------------------
+
+TEST FILE [D:\GIT\PRODUCT\TestAutomation\testdata/LoginFacebook.txt] SUCESS in CHROME!
+
