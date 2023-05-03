@@ -5,11 +5,7 @@ ChromeTermAccept == com.android.chrome:id/terms_accept
 
 TermAcceptXpath == /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.Button
 
-fbURL == https://facebook.com
-
 [testcase1]
-
-//RELOAD, fbURL, null, null
 
 wait, null, 5000 , null
 
