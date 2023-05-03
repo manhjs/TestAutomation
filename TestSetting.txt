@@ -1,0 +1,103 @@
+[SETTING]
+// Language
+Language == English
+// Input data encoding
+TestDataEncode == UTF-8
+// Each step waiting (ms)
+EachStepDelay == 1000
+// Show red mouse
+ShowMouse == NO
+// Stop when error
+StopErrorFile == NO
+// WaitUntilPeriod (ms)
+WaitUntilPeriod == 3000
+
+# --------------------------------------BROWSERS-----------------------------------
+[BROWSERS]
+//IE
+CHROME
+//FIREFOX
+//EDGE
+//ANDROID
+//IOS
+
+# ----------------------------------------IE---------------------------------------
+[IEFilePaths]
+testdata/LoginFacebook.txt
+testdata/ie
+
+[IE]
+ClassName == OpenQA.Selenium.IE.InternetExplorerDriver
+FilePaths == IEFilePaths
+
+# ------------------------------------ CHROME -------------------------------------
+[ChromeFilePaths]
+//testdata/chrome
+testdata/LoginFacebook.txt
+
+
+[CHROME]
+ClassName == OpenQA.Selenium.Chrome.ChromeDriver
+FilePaths == ChromeFilePaths
+
+# ------------------------------------ FIREFOX -------------------------------------
+[FirefoxFilePaths]
+testdata/LoginFacebook.txt
+testdata/firefox
+
+[FIREFOX]
+ClassName == OpenQA.Selenium.Firefox.FirefoxDriver
+FilePaths == FirefoxFilePaths
+
+# -------------------------------------EDGE ----------------------------------------
+[EdgeFilePaths]
+testdata/LoginFacebook.txt
+//testdata/edge
+
+[EDGE]
+ClassName == OpenQA.Selenium.Edge.EdgeDriver
+FilePaths == EdgeFilePaths
+
+
+# ------------------------------------ ANDROID -------------------------------------
+[ANDROID]
+ClassName == OpenQA.Selenium.Appium.Android.AndroidDriver
+FilePaths == AndroidFilePaths
+DriverOptions == AppiumOptions
+
+[AndroidFilePaths]
+testdata/Android.txt
+
+# ------------------------------------ IOS -------------------------------------
+[IOS]
+ClassName == OpenQA.Selenium.Appium.iOS.IOSDriver
+FilePaths == IOSFilePaths
+DriverOptions == AppiumOptions
+
+[IOSFilePaths]
+testdata/iOS.txt
+
+// ------------------------------------ Appium -------------------------------------
+[AppiumOptions]
+
+# iOS
+//AppiumServer == http://localhost:4723/wd/hub
+//platformName == iOS
+//PlatformVersion == 11.3
+//DeviceName == iPhone 6
+
+# Adnroid
+AppiumServer == http://localhost:4723/wd/hub
+platformName == Android
+
+
+#Slulator
+//PlatformVersion == 11.3
+//DeviceName == emulator-5554
+//AppPath == testdata\On_v1.4.13_apkpure.com.apk
+appPackage == com.android.chrome
+appActivity == com.google.android.apps.chrome.Main
+
+
+
+[END]
