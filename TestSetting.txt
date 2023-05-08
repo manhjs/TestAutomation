@@ -8,7 +8,7 @@ EachStepDelay == 1000
 // Show red mouse
 ShowMouse == NO
 // Stop when error
-StopErrorFile == NO
+StopErrorFile == YES
 // WaitUntilPeriod (ms)
 WaitUntilPeriod == 3000
 
