@@ -63,41 +63,47 @@ FilePaths == EdgeFilePaths
 [ANDROID]
 ClassName == OpenQA.Selenium.Appium.Android.AndroidDriver
 FilePaths == AndroidFilePaths
-DriverOptions == AppiumOptions
+DriverOptions == AndroidAppiumOptions
 
 [AndroidFilePaths]
 testdata/Android.txt
+
+[AndroidAppiumOptions]
+AppiumServer == http://localhost:4723/wd/hub
+platformName == Android
+
+// Android Chrome App
+appPackage == com.android.chrome
+appActivity == com.google.android.apps.chrome.Main
+//AppPath == testdata\On_v1.4.13_apkpure.com.apk
+
+
+// Slulator
+PlatformVersion == 11.3
+DeviceName == emulator-5554
 
 # ------------------------------------ IOS -------------------------------------
 [IOS]
 ClassName == OpenQA.Selenium.Appium.iOS.IOSDriver
 FilePaths == IOSFilePaths
-DriverOptions == AppiumOptions
+DriverOptions == IOSAppiumOptions
 
 [IOSFilePaths]
 testdata/iOS.txt
 
-// ------------------------------------ Appium -------------------------------------
-[AppiumOptions]
-
-# iOS
-//AppiumServer == http://localhost:4723/wd/hub
-//platformName == iOS
-//PlatformVersion == 11.3
-//DeviceName == iPhone 6
-
-# Adnroid
+[IOSAppiumOptions]
 AppiumServer == http://localhost:4723/wd/hub
-platformName == Android
+platformName == iOS
+automationName == XCUITest
+UDID == auto
 
+// iOS App
+bundleId == xxxx
+xcodeOrgId == yyyy
 
-#Slulator
-//PlatformVersion == 11.3
-//DeviceName == emulator-5554
-//AppPath == testdata\On_v1.4.13_apkpure.com.apk
-appPackage == com.android.chrome
-appActivity == com.google.android.apps.chrome.Main
+// iOS devices
+PlatformVersion == 11.3
+DeviceName == iPhone 6
 
-
-
+# ------------------------------------ END -------------------------------------
 [END]
