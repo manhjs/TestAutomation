@@ -1,0 +1,5 @@
+2023/06/04 update swipe command for mobile (Android, iOS...) bellow command
+<command> : SWIPE, null, startX|endX, startY|endY
+- Exapmle : SWIPE, null, 20|90, 80|80
+- SWIPE : non-case-sensative : Swipe, sWipe ... all is OK
+- start point (startX, startY) end point (endX, endY) on screen. Value is percentage (without % from 0 to 100) 
