@@ -3,3 +3,7 @@
 - Exapmle : SWIPE, null, 20|90, 80|80
 - SWIPE : non-case-sensative : Swipe, sWipe ... all is OK
 - start point (startX, startY) end point (endX, endY) on screen. Value is percentage (without % from 0 to 100) 
+
+
+2023/06/09 : Fix customer find CssSelector : type["attribute"] | name
+- example : Scroll_Item_Value2 == android.widget.TextView|2
