@@ -6,11 +6,11 @@ TestDataEncode == UTF-8
 // Each step waiting (ms)
 EachStepDelay == 1000
 // Show red mouse
-ShowMouse == NO
+ShowMouse == YES
 // Stop when error
-StopErrorFile == YES
-// WaitUntilPeriod (ms)
-WaitUntilPeriod == 3000
+StopErrorFile == NO
+// Wait until period (ms)
+WaitUntilPeriod == 10000
 
 # --------------------------------------BROWSERS-----------------------------------
 [BROWSERS]
@@ -23,8 +23,9 @@ CHROME
 
 # ----------------------------------------IE---------------------------------------
 [IEFilePaths]
-testdata/LoginFacebook.txt
-testdata/ie
+//testdata/LoginFacebook.txt
+testdata/Shinkansen/DiscountTC.txt
+//testdata/ie
 
 [IE]
 ClassName == OpenQA.Selenium.IE.InternetExplorerDriver
@@ -33,7 +34,8 @@ FilePaths == IEFilePaths
 # ------------------------------------ CHROME -------------------------------------
 [ChromeFilePaths]
 //testdata/chrome
-testdata/LoginFacebook.txt
+//testdata/LoginFacebook.txt
+testdata/Shinkansen/DiscountTC.txt
 
 
 [CHROME]
@@ -42,17 +44,19 @@ FilePaths == ChromeFilePaths
 
 # ------------------------------------ FIREFOX -------------------------------------
 [FirefoxFilePaths]
-testdata/LoginFacebook.txt
-testdata/firefox
+//testdata/LoginFacebook.txt
+testdata/Shinkansen/DiscountTC.txt
+//testdata/firefox
 
 [FIREFOX]
 ClassName == OpenQA.Selenium.Firefox.FirefoxDriver
 FilePaths == FirefoxFilePaths
 
-# -------------------------------------EDGE ----------------------------------------
+# -------------------------------------EDGE (drivers/MicrosoftWebDriver.exe)--------
 [EdgeFilePaths]
-testdata/LoginFacebook.txt
+//testdata/LoginFacebook.txt
 //testdata/edge
+testdata/Shinkansen/DiscountTC.txt
 
 [EDGE]
 ClassName == OpenQA.Selenium.Edge.EdgeDriver
