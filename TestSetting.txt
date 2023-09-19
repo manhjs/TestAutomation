@@ -42,7 +42,7 @@ testdata/Shinkansen/DiscountTC.txt
 ClassName == OpenQA.Selenium.Chrome.ChromeDriver
 FilePaths == ChromeFilePaths
 
-# ------------------------------------ FIREFOX -------------------------------------
+# ------------------------------------ FIREFOX ------------------------------------
 [FirefoxFilePaths]
 //testdata/LoginFacebook.txt
 testdata/Shinkansen/DiscountTC.txt
@@ -52,7 +52,7 @@ testdata/Shinkansen/DiscountTC.txt
 ClassName == OpenQA.Selenium.Firefox.FirefoxDriver
 FilePaths == FirefoxFilePaths
 
-# -------------------------------------EDGE (drivers/MicrosoftWebDriver.exe)--------
+# -------------------------------------EDGE----------------------------------------
 [EdgeFilePaths]
 //testdata/LoginFacebook.txt
 //testdata/edge
