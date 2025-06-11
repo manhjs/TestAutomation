@@ -1,0 +1,115 @@
+[SETTING]
+// Language
+Language == English
+// Input data encoding
+TestDataEncode == UTF-8
+// Each step waiting (ms)
+EachStepDelay == 1000
+// Show red mouse
+ShowMouse == YES
+// Stop when error
+StopErrorFile == NO
+// Wait until period (ms)
+WaitUntilPeriod == 10000
+
+# --------------------------------------BROWSERS-----------------------------------
+[BROWSERS]
+//IE
+CHROME
+//FIREFOX
+//EDGE
+//ANDROID
+//IOS
+
+# ----------------------------------------IE---------------------------------------
+[IEFilePaths]
+//testdata/LoginFacebook.txt
+testdata/Shinkansen/DiscountTC.txt
+//testdata/ie
+
+[IE]
+ClassName == OpenQA.Selenium.IE.InternetExplorerDriver
+FilePaths == IEFilePaths
+
+# ------------------------------------ CHROME -------------------------------------
+[ChromeFilePaths]
+//testdata/chrome
+//testdata/LoginFacebook.txt
+//testdata/Shinkansen/DiscountTC.txt
+testdata/MyStore/MyStoreTC.txt
+
+
+[CHROME]
+ClassName == OpenQA.Selenium.Chrome.ChromeDriver
+FilePaths == ChromeFilePaths
+
+# ------------------------------------ FIREFOX ------------------------------------
+[FirefoxFilePaths]
+//testdata/LoginFacebook.txt
+testdata/Shinkansen/DiscountTC.txt
+//testdata/firefox
+
+[FIREFOX]
+ClassName == OpenQA.Selenium.Firefox.FirefoxDriver
+FilePaths == FirefoxFilePaths
+
+# -------------------------------------EDGE----------------------------------------
+[EdgeFilePaths]
+//testdata/LoginFacebook.txt
+//testdata/edge
+testdata/Shinkansen/DiscountTC.txt
+
+[EDGE]
+ClassName == OpenQA.Selenium.Edge.EdgeDriver
+FilePaths == EdgeFilePaths
+
+
+# ------------------------------------ ANDROID -------------------------------------
+[ANDROID]
+ClassName == OpenQA.Selenium.Appium.Android.AndroidDriver
+FilePaths == AndroidFilePaths
+DriverOptions == AndroidAppiumOptions
+
+[AndroidFilePaths]
+testdata/Android.txt
+
+[AndroidAppiumOptions]
+AppiumServer == http://localhost:4723/wd/hub
+platformName == Android
+
+// Android Chrome App
+appPackage == com.android.chrome
+appActivity == com.google.android.apps.chrome.Main
+//AppPath == testdata\On_v1.4.13_apkpure.com.apk
+
+
+// Slulator
+platformVersion == 11.3
+deviceName == emulator-5554
+
+# ------------------------------------ IOS -------------------------------------
+[IOS]
+ClassName == OpenQA.Selenium.Appium.iOS.IOSDriver
+FilePaths == IOSFilePaths
+DriverOptions == IOSAppiumOptions
+
+[IOSFilePaths]
+testdata/iOS.txt
+
+[IOSAppiumOptions]
+AppiumServer == http://localhost:4723/wd/hub
+platformName == iOS
+automationName == XCUITest
+
+
+// iOS App
+bundleId == xxxx
+xcodeOrgId == yyyy
+
+// iOS devices
+platformVersion == 11.3
+deviceName == iPhone 6
+UDID == auto
+
+# ------------------------------------ END -------------------------------------
+[END]

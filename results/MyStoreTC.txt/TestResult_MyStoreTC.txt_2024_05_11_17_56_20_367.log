@@ -1,0 +1,17 @@
+﻿----------------[D:/GIT/PRODUCT/TestAutomation/testdata/MyStore/MyStoreTC.txt | testcase1]----------------
+[CMD/FRAME] : RELOAD, [ITEM] : AppURL, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : ImportButton, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : ProductName, [X/SET VALUE] : iPhone 14, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : Maker, [X/SET VALUE] : Apple, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : Price, [X/SET VALUE] : 1500, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : Amount, [X/SET VALUE] : 10, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : Location, [X/SET VALUE] : Cabinet-01, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : SaveButton, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : Amount_row1, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : 10, [ACTION/COMMENT] : Check amount = 10
+[CMD/FRAME] : null, [ITEM] : EditButton_row1, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : CloseButton, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+
+-------------------------------------------------SUMMARY-------------------------------------------------
+
+TEST FILE [D:/GIT/PRODUCT/TestAutomation/testdata/MyStore/MyStoreTC.txt] SUCESS in CHROME!
+

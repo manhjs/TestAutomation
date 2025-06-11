@@ -1,0 +1,23 @@
+﻿----------------[C:/Users/ANNA/Desktop/TestAutomation/testdata/Shinkansen/DiscountTC.txt | testcase1]----------------
+[CMD/FRAME] : RELOAD, [ITEM] : AppURL, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : DepartDate, [X/SET VALUE] : 06/15/2023, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : DepartTime, [X/SET VALUE] : 06:00, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : Age20-60, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : MemberYes, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : CalculateButton, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : TotalDiscunt, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : 55%
+----------------[C:/Users/ANNA/Desktop/TestAutomation/testdata/Shinkansen/DiscountTC.txt | testcase2]----------------
+[CMD/FRAME] : RELOAD, [ITEM] : AppURL, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : DepartDate, [X/SET VALUE] : 05/01/2023, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : DepartTime, [X/SET VALUE] : 13:00, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : AgeUnder20, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : MemberNo, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : CalculateButton, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : null
+[CMD/FRAME] : null, [ITEM] : TotalDiscunt, [X/SET VALUE] : null, [Y/EXPECTED VALUE] : 30%
+<ERROR> Result[60%]is not matched to the Expected[30%]
+
+-------------------------------------------------SUMMARY-------------------------------------------------
+<ERROR> testcase2 : Result[60%]is not matched to the Expected[30%]
+
+TEST FILE [C:\Users\ANNA\Desktop\TestAutomation/testdata/Shinkansen/DiscountTC.txt] FAILED in CHROME!
+

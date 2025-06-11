@@ -1,0 +1,63 @@
+[IMPORTS]
+
+[LOCATORS]
+AppURL == testdata/Shinkansen/Discount.html
+DepartDate == //*[@id="d-date"]
+DepartTime == //*[@id="d-time"]
+AgeUnder20 == //*[@id="under-20"]
+Age20-60 == //*[@id="20-60"]
+AgeOver60 == //*[@id="over-60"]
+MemberYes == //*[@id="member-yes"]
+MemberNo == //*[@id="member-no"]
+CalculateButton == //*[@id="calculate-discount"]
+TotalDiscunt == //*[@id="total-discount"]
+
+[testcase1]
+// load web
+RELOAD, AppURL, null, null
+
+// set date = 06/15/2023
+null, DepartDate, 06/15/2023, null
+
+// set time = 06:00
+null, DepartTime, 06:00, null
+
+// choose age 20-60
+null, Age20-60, null, null
+
+// choose member yes
+null, MemberYes, null, null
+
+// click calculate button
+null, CalculateButton, null, null
+
+// check total discount = 55%
+null, TotalDiscunt, null, 55%
+
+[testcase2]
+// load web
+RELOAD, AppURL, null, null
+
+// set date = 05/01/2023
+null, DepartDate, 05/01/2023, null
+
+// set time = 13:00
+null, DepartTime, 13:00, null
+
+// choose age under 20
+null, AgeUnder20, null, null
+
+// choose member no
+null, MemberNo, null, null
+
+// click calculate button
+null, CalculateButton, null, null
+
+// check total discount = 30%
+null, TotalDiscunt, null, 30%
+
+[COMMANDS]
+testcase1
+testcase2
+
+[END]

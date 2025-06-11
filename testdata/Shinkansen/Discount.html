@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header>
+    <title>Shinkansen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+  </header>
+
+  <body>
+    <div class="container mt-3">
+      <div class="text-center">
+        <h1 id="AppTitle" class="text-primary">Welcome to Shinkansen</h1>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-4">
+          <div class="text-center">
+            <h3 id="AppTitle" class="text-primary">Ticket discount</h3>
+          </div>
+          <form class="form-group">
+            <div class="form-group1">
+              <label for="d-date">Departure</label
+              ><input
+                type="text"
+                id="place"
+                name="place"
+                class="form-control"
+                placeholder="Your location"
+              />
+            </div>
+            <!-- <br /> -->
+            <div class="form-group1">
+              <label for="d-date">Date</label
+              ><input
+                type="date"
+                id="d-date"
+                name="d-date"
+                class="form-control"
+              />
+            </div>
+            <!-- <br /> -->
+
+            <div class="form-group1">
+              <label>Time</label
+              ><input
+                id="d-time"
+                type="text"
+                class="form-control"
+                name="d-time"
+              />
+            </div>
+            <!-- <br /> -->
+            <div class="form-group1">
+              <label>Please choose your Age</label><br />
+
+              <div class="btn-group" role="group" aria-label="First group">
+                <button type="button" id="under-20" class="btn btn-light">
+                  Under 20
+                </button>
+                <button type="button" id="20-60" class="btn btn-light">
+                  20 - 60
+                </button>
+                <button type="button" id="over-60" class="btn btn-light">
+                  Over 60
+                </button>
+              </div>
+            </div>
+            <!-- <br /> -->
+            <div class="form-group1">
+              <label>Are your club member?</label><br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="member"
+                  id="member-yes"
+                />
+                <label class="form-check-label" for="member-yes"> Yes </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="member"
+                  id="member-no"
+                  checked
+                />
+                <label class="form-check-label" for="member-no"> No </label>
+              </div>
+            </div>
+            <!-- <br /> -->
+            <hr />
+            <div class="form-group1">
+              <h4 class="text-danger">
+                <span>Total discount : </span
+                ><span id="total-discount">0%</span>
+              </h4>
+            </div>
+            <br />
+            <!-- <br /> -->
+            <div class="text-center">
+              <button
+                id="calculate-discount"
+                type="button"
+                class="btn btn-primary"
+              >
+                Calculate
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-8">
+          <div class="text-center">
+            <img
+              src="data:image/png;base64,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"
+              alt="CGV"
+            />
+          </div>
+          <div>
+            <h3 id="AppTitle" class="text-primary">Time table</h3>
+            <table class="table text-center">
+              <thead>
+                <tr class="bg-primary">
+                  <th class="text-center text-white" style="width: 10%">No.</th>
+                  <th class="text-center text-white" style="width: 25">Date</th>
+                  <th class="text-center text-white" style="width: 15%">
+                    Time
+                  </th>
+                  <th class="text-center text-white" style="width: 25%">
+                    Departure
+                  </th>
+                  <th class="text-center text-white" style="width: 25%">
+                    Arrival
+                  </th>
+                  <th class="text-center text-white">Time</th>
+                </tr>
+              </thead>
+              <tbody id="TableList">
+                <tr class="text-center">
+                  <td>1</td>
+                  <td>2022-11-18</td>
+                  <td>21:00</td>
+                  <td>Tokyo</td>
+                  <td>Osaka</td>
+                  <td>23:05</td>
+                </tr>
+                <tr class="text-center">
+                  <td>2</td>
+                  <td>2022-11-18</td>
+                  <td>22:15</td>
+                  <td>Nagoya</td>
+                  <td>Hiroshima</td>
+                  <td>02:21</td>
+                </tr>
+                <tr class="text-center">
+                  <td>3</td>
+                  <td>2022-11-19</td>
+                  <td>07:30</td>
+                  <td>Okayama</td>
+                  <td>Hiroshima</td>
+                  <td>12:30</td>
+                </tr>
+                <tr class="text-center">
+                  <td>4</td>
+                  <td>2022-11-19</td>
+                  <td>08:30</td>
+                  <td>Nara</td>
+                  <td>Kyoto</td>
+                  <td>09:45</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var dayDiscount = 0.0;
+      var timeDiscount = 0.0;
+      var ageDiscounnt = 0.0;
+      var memberDiscount = 0.0;
+
+      $("#under-20").click(function (e) {
+        // debugger;
+        if ($("#under-20").hasClass("btn-light")) {
+          $("#under-20").removeClass("btn-light");
+          $("#under-20").addClass("btn-primary");
+        }
+
+        if ($("#20-60").hasClass("btn-primary")) {
+          $("#20-60").removeClass("btn-primary");
+          $("#20-60").addClass("btn-light");
+        }
+
+        if ($("#over-60").hasClass("btn-primary")) {
+          $("#over-60").removeClass("btn-primary");
+          $("#over-60").addClass("btn-light");
+        }
+
+        ageDiscounnt = 0.2;
+      });
+      $("#20-60").click(function (e) {
+        // debugger;
+        if ($("#20-60").hasClass("btn-light")) {
+          $("#20-60").removeClass("btn-light");
+          $("#20-60").addClass("btn-primary");
+        }
+
+        if ($("#under-20").hasClass("btn-primary")) {
+          $("#under-20").removeClass("btn-primary");
+          $("#under-20").addClass("btn-light");
+        }
+
+        if ($("#over-60").hasClass("btn-primary")) {
+          $("#over-60").removeClass("btn-primary");
+          $("#over-60").addClass("btn-light");
+        }
+        ageDiscounnt = 0.0;
+      });
+      $("#over-60").click(function (e) {
+        // debugger;
+        if ($("#over-60").hasClass("btn-light")) {
+          $("#over-60").removeClass("btn-light");
+          $("#over-60").addClass("btn-primary");
+        }
+
+        if ($("#under-20").hasClass("btn-primary")) {
+          $("#under-20").removeClass("btn-primary");
+          $("#under-20").addClass("btn-light");
+        }
+
+        if ($("#20-60").hasClass("btn-primary")) {
+          $("#20-60").removeClass("btn-primary");
+          $("#20-60").addClass("btn-light");
+        }
+
+        ageDiscounnt = 0.2;
+      });
+
+      $("#member-yes").click(function (e) {
+        // debugger;
+        memberDiscount = 0.05;
+      });
+      $("#member-no").click(function (e) {
+        // debugger;
+        memberDiscount = 0.0;
+      });
+
+      $("#calculate-discount").click(function (e) {
+        // debugger;
+
+        var date = $("#d-date").val();
+        var time = $("#d-time").val();
+
+        if (date.length > 0) {
+          var departDate = new Date(date);
+          if (isWeekend(departDate)) {
+            dayDiscount = 0.0;
+          } else {
+            dayDiscount = 0.2;
+          }
+
+          if (time.length > 0) {
+            if (
+              Date.parse(date + " 08:00:00") > Date.parse(date + " " + time)
+            ) {
+              timeDiscount = 0.3;
+            } else if (
+              Date.parse(date + " 18:00:00") > Date.parse(date + " " + time)
+            ) {
+              timeDiscount = 0.2;
+            } else if (
+              Date.parse(date + " 22:00:00") > Date.parse(date + " " + time)
+            ) {
+              timeDiscount = 0.0;
+            } else if (
+              Date.parse(date + " 23:59:59") > Date.parse(date + " " + time)
+            ) {
+              timeDiscount = 0.2;
+            }
+          } else {
+            timeDiscount = 0.0;
+          }
+        } else {
+          dayDiscount = 0.0;
+        }
+
+        var total = dayDiscount + timeDiscount + ageDiscounnt + memberDiscount;
+        $("#total-discount").text(Math.round(total * 100) + "%");
+      });
+
+      function isWeekend(date = new Date()) {
+        return date.getDay() % 6 === 0;
+      }
+    </script>
+  </body>
+</html>

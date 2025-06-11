@@ -1,0 +1,23 @@
+
+[LOCATORS]
+
+ChromeTermAccept == com.android.chrome:id/terms_accept
+
+TermAcceptXpath == /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.Button
+
+[testcase1]
+
+wait, null, 5000 , null
+
+// click TermAccept
+null, ChromeTermAccept, null, null
+
+// click TermAccept
+//null, TermAcceptXpath, null, null
+
+wait, null, 5000 , null
+
+[COMMANDS]
+testcase1
+
+[END]
